@@ -1,0 +1,8 @@
+Chaîne de confiance
+-------------------
+
+====
+TODO
+
+Reprendre la partie sur les chaines de confiance à base de certificat
+====

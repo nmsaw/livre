@@ -1,0 +1,24 @@
+HTTP
+----
+
+Le propre d'une application web est d'utiliser le protocole HTTP. De nombreuses failles reposent sur une mauvaise compréhension de ce protocole, aussi tout développeur souhaitant dépasser le state de débutant confirmé footnote:[au sens du modèle de compétence de Dreyfuss & Dreyfuss] se doit de le comprendre.
+
+
+
+Histoire courte
+~~~~~~~~~~~~~~~
+
+Pile protocolaire
+~~~~~~~~~~~~~~~~~ 
+
+
+HTTP est un protocolaire de haut niveau. Selon le modèle OSI footnote:[cf. https://fr.wikipedia.org/wiki/Mod%C3%A8le_OSI], on peut le situer sur la couche n°7 _Application_.
+
+Cela signifie que HTTP repose sur des couches réseaux footnote:[Pour faire grossier, ces couches successives ont pour responsabilité de transformer les échanges entre un navigateur et un serveur en signaux électriques ou en ondes radio qui passent par le réseau filaire ou wifi. Pour plus d'information]
+
+
+image::images/tcp_pile_protocolaire.png[]
+
+La couche IP est un ensemble de protocoles réseau en charge de faire en sorte que des réseaux physiques différents (LAN et WAN) puissent communiquer.
+
+LA couche TCP est un protocole de transport qui est responsable du transport des données, de la garantie de leur arrivé 
