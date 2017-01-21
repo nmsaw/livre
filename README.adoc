@@ -1,3 +1,36 @@
 = Livre
 
-Ouvrage collectif rédigé à l'issue de l'Action Nationale de Formation "Nouvelles Menaces Sécurité pour les Applications Web" organisé par la DSI du CNRS et le réseau métier https://devlog.cnrs.fr[DevLOG]
+Ouvrage collectif rédigé à l'issue de l'Action Nationale de Formation "Nouvelles Menaces Sécurité pour les Applications Web" organisé par la DSI du CNRS et le réseau métier http://devlog.cnrs.fr[DevLOG]
+
+
+== A qui s'adresse cet ouvrage
+
+Cet ouvrage s'adresse à tous les développeurs d'application web, mais a été pensé en direction pour les développeurs de l'Enseignement Supérieur et de la Recherche (ESR) et des problématiques propres à ce milieu.
+
+
+== Outillage
+
+Le livre est écrit en http://www.methods.co.nz/asciidoc/[Asciidoc] et est considéré comme un code source en soit.
+
+Nous conseillons d'utiliser l'éditeur http://asciidocfx.com/[AsciiDocFX]
+
+
+== Structure de l'ouvrage
+
+* Le livre en soit est le document "Livre.adoc". 
+* Les chapitres sont inclus dans "Livre.adoc" avec l'instruction
+
+[source]
+----
+\include::chapitres/01_introduction.adoc[Introduction]
+----
+
+Ce template permet de synthétiser toutes les commandes propres à un ouvrage en asciidoc https://gist.github.com/esfand/8401548#file-booksample-text
+
+== Cycle de contribution
+
+1. cloner le livre
+2. modifier le livre
+3. commiter le livre
+4. Faites une pull-request
+
