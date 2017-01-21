@@ -1,0 +1,2 @@
+= Livre
+Ouvrage collectif rédigé à l'issue de l'Action Nationale de Formation "Nouvelles Menaces Sécurité pour les Applications Web" organisé par la DSI du CNRS et le réseau métier https://devlog.cnrs.fr[DevLOG]
