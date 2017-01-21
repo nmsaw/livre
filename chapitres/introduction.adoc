@@ -1,10 +1,40 @@
 Introduction
 ------------
 
-Niveau 2
-~~~~~~~~
+Origine du Guide NMSAW
+~~~~~~~~~~~~~~~~~~~~~~
 
-Niveau 3
-^^^^^^^^
 
-((monkey))
+En janvier 2017 s'est tenue à Gif Sur Yvette une Action Nationale de Formation organisée par le réseau métier http://devlog.cnrs.fr[DevLOG] et la https://www.dsi.cnrs.fr[DSI du CNRS] sur les _Nouvelles Menaces Sécurité pour les Applications Web_.
+
+A l'issu de cette action, il a été décidé de pérenniser et étendre cette action pédagogique sous la forme d'un guide.
+
+Organisation 
+~~~~~~~~~~~~~ 
+
+====
+TODO
+
+Ici mettre les principes de l'organisation de l'édition du guide
+
+====
+
+Rédaction en Asciidoc
+^^^^^^^^^^^^^^^^^^^^^
+
+====
+TODO
+
+Ici mettre les principes de rédaction en Asciidoc
+
+====
+
+Contribution sous forme de Pull-Request
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+====
+TODO
+
+Ici mettre les principes de validation
+
+====
