@@ -10,3 +10,7 @@ include::chapitres/introduction.adoc[Introduction]
 include::chapitres/lois_reglementations.adoc[Lois et réglementations]
 
 include::chapitres/cryptographie.adoc[Cryptographie]
+
+include::chapitres/chaine_de_confiance.adoc[Confiance]
+
+include::chapitres/http.adoc[HTTP]
