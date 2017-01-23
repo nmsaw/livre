@@ -16,9 +16,21 @@ HTTP est un protocolaire de haut niveau. Selon le modèle OSI footnote:[cf. http
 
 Cela signifie que HTTP repose sur des couches réseaux footnote:[Pour faire grossier, ces couches successives ont pour responsabilité de transformer les échanges entre un navigateur et un serveur en signaux électriques ou en ondes radio qui passent par le réseau filaire ou wifi. Pour plus d'information]
 
-
+.Pile protocolaire
 image::images/tcp_pile_protocolaire.png[]
 
-La couche IP est un ensemble de protocoles réseau en charge de faire en sorte que des réseaux physiques différents (LAN et WAN) puissent communiquer.
+La couche ((IP)) (Internet Protocol) est un ensemble de protocoles réseau en charge de faire en sorte que des réseaux physiques différents (LAN et WAN) puissent communiquer.
+IP ne garantit en rien que les données arrivent dans l'ordre ou même qu'elles arrivent toutes à destination. Les paquets sont transmis en mode _Best Effort_ footnote:[Best Effort c'est à dire qu mieux des capacités mais sans engagement de résultat]. C'est le travail de la couche au dessus, TCP.
 
-LA couche TCP est un protocole de transport qui est responsable du transport des données, de la garantie de leur arrivé 
+
+La couche ((TCP)) (Transmission Control Protocol) est un protocole de transport qui est responsable de la garantie de leur arrivé et de leur ordonnancement. TCP est dit _connecté_ dans le sens où il se préoccupe de la connexion des deux parties souhaitant échanger des données.
+
+.Echange TCP de bout en bout à travers les couches
+image::images/tcp_echange_bout_en_bout.png[]
+
+.Références
+****
+* https://fr.wikipedia.org/wiki/Transmission_Control_Protocol[TCP (Wikipédia)]
+* https://fr.wikipedia.org/wiki/Internet_Protocol[Internet Protocol (Wikipédia)]
+
+****
