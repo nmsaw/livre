@@ -5,7 +5,7 @@ Ouvrage collectif rédigé à l'issue de l'Action Nationale de Formation "Nouvel
 
 == A qui s'adresse cet ouvrage
 
-Cet ouvrage s'adresse à tous les développeurs d'application web, mais a été pensé en direction pour les développeurs de l'Enseignement Supérieur et de la Recherche (ESR) et des problématiques propres à ce milieu.
+Cet ouvrage s'adresse à tous les développeurs d'application web, mais a été pensé en direction des développeurs de l'Enseignement Supérieur et de la Recherche (ESR) et des problématiques propres à ce milieu.
 
 
 == Outillage
