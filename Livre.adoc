@@ -5,12 +5,12 @@ v0.0
 :doctype: book
 
 
-include::chapitres/introduction.adoc[Introduction]
+include::chapitre_introduction.adoc[Introduction]
 
-include::chapitres/lois_reglementations.adoc[Lois et réglementations]
+include::chapitre_lois_reglementations.adoc[Lois et réglementations]
 
-include::chapitres/cryptographie.adoc[Cryptographie]
+include::chapitre_cryptographie.adoc[Cryptographie]
 
-include::chapitres/chaine_de_confiance.adoc[Confiance]
+include::chapitre_chaine_de_confiance.adoc[Confiance]
 
-include::chapitres/http.adoc[HTTP]
+include::chapitre_http.adoc[HTTP]
