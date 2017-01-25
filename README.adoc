@@ -37,8 +37,9 @@ Ce template permet de synthétiser toutes les commandes propres à un ouvrage en
 
 == Cycle de contribution
 
-1. cloner le livre
-2. modifier le livre
-3. commiter le livre
-4. Faites une pull-request
+1. Faire un `fork` 
+2. cloner le livre
+3. modifier le livre
+4. commiter le livre
+5. Faites une pull-request
 
