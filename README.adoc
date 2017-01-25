@@ -22,8 +22,16 @@ Nous conseillons d'utiliser l'éditeur http://asciidocfx.com/[AsciiDocFX]
 
 [source]
 ----
-\include::chapitres/01_introduction.adoc[Introduction]
+\include::chapitre_introduction.adoc[Introduction]
 ----
+
+chaque document chapitre doit 
+
+* être au même niveau que Livre.adoc
+* être prefixé par `chapitre_`
+
+
+Pourquoi au même niveau ? En raison de génération d'image sous PDF.
 
 Ce template permet de synthétiser toutes les commandes propres à un ouvrage en asciidoc https://gist.github.com/esfand/8401548#file-booksample-text
 
