@@ -17,7 +17,7 @@ HTTP est un protocolaire de haut niveau. Selon le modèle OSI footnote:[cf. http
 Cela signifie que HTTP repose sur des couches réseaux footnote:[Pour faire grossier, ces couches successives ont pour responsabilité de transformer les échanges entre un navigateur et un serveur en signaux électriques ou en ondes radio qui passent par le réseau filaire ou wifi. Pour plus d'information]
 
 .Pile protocolaire
-image::images/tcp_pile_protocolaire.png[]
+image::images/tcp_pile_protocolaire.png["Pile",height=20,scaledwidth="75%"]
 
 La couche ((IP)) (Internet Protocol) est un ensemble de protocoles réseau en charge de faire en sorte que des réseaux physiques différents (LAN et WAN) puissent communiquer.
 IP ne garantit en rien que les données arrivent dans l'ordre ou même qu'elles arrivent toutes à destination. Les paquets sont transmis en mode _Best Effort_ footnote:[Best Effort c'est à dire qu mieux des capacités mais sans engagement de résultat]. C'est le travail de la couche au dessus, TCP.
@@ -28,9 +28,54 @@ La couche ((TCP)) (Transmission Control Protocol) est un protocole de transport 
 .Echange TCP de bout en bout à travers les couches
 image::images/tcp_echange_bout_en_bout.png[]
 
+On a coutume de dire que la couche TCP est en charge du dialogue entre serveurs et http du dialogue entre processus.
+
+Chauqe processus est identifiable par 
+
+* une adresse https://fr.wikipedia.org/wiki/Adresse_IP[IP]
+* un port 
+
+
+Une connexion TCP/IP est basée sur deux couples 
+
+* (adresse IP, port) du client
+* (adresse IP, port) du serveur
+
+Sur les deux composants, client et serveur, la communication TCP/IP se fait à travers de `socket`. Un ((socket)) est une interface entre l'extérieur et l'intérieur de chacun.
+
+[NOTE]
+====
+Il existe deux versions d'adresses IP actuellement utilisées
+
+* IP v4 sur 32 bits, soit 4 octets, 
+* https://fr.wikipedia.org/wiki/IPv6[IP v6] sur 128 bits, soit 16 octets.
+
+L'adresse IP v4 s'écrit sous la forme xxx.xxx.xxx.xxx où un block xxx est un entier compris entre 0 et 255
+
+L'adresse IP v6 s'écrit sous la forme de 8 groupes de 2 octets *en hexadécimale* séparés par un symbole _deux-points_ `:`
+
+ 2001:0db8:0000:85a3:0000:0000:ac1f:8001
+
+Plusieurs règles permettent de simplifier cette adresse: en résumant les blocs de zéro à un seul zéro
+
+ 2001:0db8:0000:85a3:0000:0000:ac1f:8001
+           ----      ---- ----
+ 2001:0db8:0:85a3:0:0:ac1f:8001
+           ^      ^ ^ 
+ 
+ou en utilisant le symbole _double deux-points_ `::` quand deux blocs de zéro se succèdent
+
+ 2001:0db8:0:85a3:0:0:ac1f:8001
+                  ^ ^ 
+ 2001:0db8:0:85a3::ac1f:8001
+                 ^^  
+====
+
+
 .Références
 ****
 * https://fr.wikipedia.org/wiki/Transmission_Control_Protocol[TCP (Wikipédia)]
 * https://fr.wikipedia.org/wiki/Internet_Protocol[Internet Protocol (Wikipédia)]
+* https://fr.wikipedia.org/wiki/Socket[Socket]
 
 ****
