@@ -30,7 +30,24 @@ image::images/tcp_echange_bout_en_bout.png[]
 
 On a coutume de dire que la couche TCP est en charge du dialogue entre serveurs et http du dialogue entre processus.
 
-Chauqe processus est identifiable par 
+
+[NOTE]
+.Transmission des données entre couches réseau
+====
+Comment les données passent-elles à travers les couches ?
+
+Chaque couche de niveau _n_ fournit une structure de données à la couche inférieur _n-1_, laquelle _encapsule_ 
+la structure de donnée de niveau _n_ dans une structure de niveau _n-1_ et ainsi de suite.
+
+Il y a des opérations intermédaires, notamment le découpage de paquets de niveau _n_ en petits paquets de niveau _n-1_
+
+
+image::images/tcp_ip_encapsulation.png[]
+
+
+====
+
+Chaque processus est identifiable par 
 
 * une adresse https://fr.wikipedia.org/wiki/Adresse_IP[IP]
 * un port 
@@ -70,6 +87,21 @@ ou en utilisant le symbole _double deux-points_ `::` quand deux blocs de zéro s
  2001:0db8:0:85a3::ac1f:8001
                  ^^  
 ====
+
+Le protocole utilisé pour l'ouverture d'une connexion TCP/IP est appelé _Three-Way Handshake_
+
+.TCP three way handshake
+image::images/tcp_three_Way_Handshake.png[]
+
+Par état du client ou du serveur nous parlons de leurs états de connexion.
+
+* le serveur est état d'écoute (_LISTEN_)
+* Dans un premier temps le client envoie une trame TCP avec le flag `SYN` au serveur. C'est une demande de synchronisation. Après envoi, il se met dans l'état `SYN-SENT`
+* le serveur prend en compte la demande et répond par un `SYN-ACK`, pour signifier l'acceptation de la demande initial. Le seveur passe en état `SYNC-RECEVEID` 
+* le client valide la réponse du serveur par l'envoi d'une trame `ACK` et considère la connexion établie `ESTABLISEHD`.
+* A la réception de la trame `ACK`, le serveur considère la connexion établie lui aussi.
+
+Les échanges peuvent alors commencer.
 
 
 .Références
