@@ -103,6 +103,25 @@ Par état du client ou du serveur nous parlons de leurs états de connexion.
 
 Les échanges peuvent alors commencer.
 
+TLS
+~~~ 
+
+HTTP transporte les données en clair par défaut. Cela veut dire que le trafic est entièrement visible pour tout acteur ou composant entre le client et le serveur. Or dans le monde l'internet, le chemin pris n'est pas déterminable et il convient de s'assurer que les données applicatives ne soient pas accessibles.
+
+Pour cela, il est nécessaire de chiffrer la communication.
+
+Le choix historique est d'insérer entre HTTP et TCP/IP une couche en charge de chiffrer le trafic. Cette couche s'appelle TLS pour _Transport Layer Security_.
+
+.Positionnement de TLS
+image::images/http_https_layers_sidebyside.png[width=500]
+
+Si nous reprenons l'ouverture d'une connexion TCP/Ip précédente, nous pouvons y ajouter l'établissement, _une fois la connexion TCP établie_, de la session TLS.
+
+.Handshake TLS
+image::images/tls_handshake.png[]
+
+TODO détailler les étapes 
+
 
 .Références
 ****
