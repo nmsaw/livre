@@ -8,6 +8,16 @@ Le propre d'une application web est d'utiliser le protocole HTTP. De nombreuses 
 Histoire courte
 ~~~~~~~~~~~~~~~
 
+HTTP signifie **H**yper **T**ext **T**ransport **P**rotocole
+
+Histoire longue en 2 secondes (à détailler)
+
+* 1989 : Création par Tim Berners-Lee au CERN,
+* 1996 : HTTP/1.0, décrit dans la RFC 1945
+* 1997 : HTTP/1.1, normalisé par l'IETF RFC 2616
+* 2014 : éclatement plusieurs RFC
+* 2012: groupe de travail sur HTTP/2.0
+
 Pile protocolaire
 ~~~~~~~~~~~~~~~~~ 
 
@@ -115,18 +125,43 @@ Le choix historique est d'insérer entre HTTP et TCP/IP une couche en charge de 
 .Positionnement de TLS
 image::images/http_https_layers_sidebyside.png[width=500]
 
+
+
 Si nous reprenons l'ouverture d'une connexion TCP/Ip précédente, nous pouvons y ajouter l'établissement, _une fois la connexion TCP établie_, de la session TLS.
 
 .Handshake TLS
 image::images/tls_handshake.png[]
 
-TODO détailler les étapes 
+* Après l'envoi du `ACK` final du dialogue TCP, la couche TLS commence le sien en vue d'établir une session
+* Le client initie le dialoge TLS en envoyant une commande `clientHello`. Cette commande contient des informations sur 
+** la version maximale de TLS supportée par le client,
+** la liste des algorithmes de chiffrement (cipher) supportés par le client.
+* Le serveur répond à son tour par un `serverHello` avec une sélection parmi les choix proposés par le client quant à la version de TLS et l'algorithme de chiffrement à utiliser.
+* Puis le serveur envoie des éléments d'identification
+** son certificat pour que le client puisse établir la preuve de son identité
+** une clef qui va servir à établir la clef de chiffrage symétrique
+* Le serveur peut demander également au client de fournir un certificat pour établir lui aussi son identité.
+* Le client va répondre en créant une clef à partir de celle fournie par le serveur et l'algorithme sélectionné
+** il peut renvoyer son certificat pour identification
+* le client bascule en mode chiffré
+* le serveur bascule en mode chiffré
 
+Pour plus de détail, consulter les références
 
 .Références
 ****
 * https://fr.wikipedia.org/wiki/Transmission_Control_Protocol[TCP (Wikipédia)]
 * https://fr.wikipedia.org/wiki/Internet_Protocol[Internet Protocol (Wikipédia)]
+* https://fr.wikipedia.org/wiki/Cipher[Cipher ou Chiffrement (Wikipédia]
 * https://fr.wikipedia.org/wiki/Socket[Socket]
+* http://robertheaton.com/2014/03/27/how-does-https-actually-work/[How does HTTPS actually work?]
+* http://wiki.linuxwall.info/doku.php/fr:ressources:dossiers:ssl_pki:1_les_bases#tls_handshake_protocol[TLS handshake (en français)]
+* http://www.authsecu.com/ssl-tls/ssl-tls.php[TLS handshake (en français)]
+
 
 ****
+
+Protocole: le P de HTTP
+~~~~~~~~~~~~~~~~~~~~~~~ 
+
+Le protocole HTTP consiste en une suite de ((requête))s et de ((réponse))s vis-à-vis d'une ressource.
